@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <title>Portfolio - Mario Monzón</title>
+</head>
+
+<body>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">Mario</a>
+            </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hola,<br>Soy <span class="home__title-color">Mario</span><br> Desarrollador de
+                    aplicaciones multiplataforma</h1>
+                <a href="#contact" class="button">Contactar</a>
+            </div>
+            <div class="home__social">
+                <a href="https://www.linkedin.com/in/mario-monz%C3%B3n-peso-046649241/" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/maario300/maario300.github.io" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            </div>
+            <div class="home__img">
+                <svg class="home__blob" viewBox="0 0 479 467">
+                    <mask id="mask0" mask-type="alpha">
+                        <path d="M9.19024 145.964C34..." />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path d="M9.19024 145.964C34..." />
+                        <image class="home__blob-img" x="50" y="60" href="assets/img/Foto Mario Monzón Peso.jpg" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/Foto Mario Monzón Peso.jpg" alt="">
+                </div>
+                <div>
+                    <h2 class="about__subtitle">Soy Mario Monzón</h2>
+                    <p class="about__text">
+                        Soy una persona proactiva, organizada y responsable. Excelente compañero de equipo y con buenas
+                        relaciones interpersonales.
+                        Mi objetivo es incorporarme al mercado laboral en el sector informático como desarrollador de
+                        aplicaciones multiplataforma.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Competencias Técnicas</h2>
+                    <p class="skills__text">Estas son algunas de mis habilidades en programación, bases de datos y
+                        herramientas:</p>
+
+                    <div class="skills__data"><span class="skills__name">Java</span></div>
+                    <div class="skills__data"><span class="skills__name">Java Swing</span></div>
+                    <div class="skills__data"><span class="skills__name">JDBC / JPA</span></div>
+                    <div class="skills__data"><span class="skills__name">MySQL</span></div>
+                    <div class="skills__data"><span class="skills__name">HTML / CSS</span></div>
+                    <div class="skills__data"><span class="skills__name">Docker</span></div>
+                    <div class="skills__data"><span class="skills__name">Git & Github</span></div>
+                    <div class="skills__data"><span class="skills__name">Apache Netbeans / Visual Studio</span></div>
+                </div>
+                <div>
+                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+
+        <!--===== WORK =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Experiencia</h2>
+            <div class="work__container bd-grid">
+                <p><b>TEMYPLAST</b> (03/2024 - 08/2024) - Mozo de almacén</p>
+                <p><b>DEICHMANN</b> (11/2023 - 03/2024) - Dependiente</p>
+                <p><b>HYUNDAI</b> (80h prácticas) - Desarrollador Web (Landingpage, SEO, Accesibilidad, Wordpress)</p>
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contacto</h2>
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Nombre" class="contact__input" value="Mario Monzón">
+                    <input type="mail" placeholder="Email" class="contact__input" value="mario.monzon.peso@gmail.com">
+                    <input type="text" placeholder="Numero" class="contact__input" value="+34 654 810 689">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Mario Monzón</p>
+        <div class="footer__social">
+        </div>
+        <p class="footer__copy">&#169; 2025 Mario Monzón. Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
