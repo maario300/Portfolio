@@ -308,18 +308,39 @@ img {
 
 /* ===== WORK =====*/
 .work__container {
-  row-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  align-items: stretch;
+  padding-top: 2rem;
 }
+
 .work__img {
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
-  border-radius: 0.5rem;
+  width: 100%;
+  border-radius: 0.75rem;
   overflow: hidden;
+  position: relative;
+  box-shadow: 0px 4px 20px rgba(14, 36, 49, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .work__img img {
-  transition: 1s;
+  width: 100%;
+  height: 250px;
+  object-fit: cover; /* 🔹 Mantiene proporción sin deformar */
+  display: block;
+  border-radius: 0.75rem;
+  transition: transform 0.6s ease;
 }
-.work__img img:hover {
-  transform: scale(1.1);
+
+.work__img:hover img {
+  transform: scale(1.08);
+}
+
+.work__img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== CONTACT =====*/
