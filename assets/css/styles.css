@@ -520,3 +520,14 @@ img {
 .button:hover {
     background-color: #005fcc;
 }
+
+/* ===== EXPERIENCE =====*/
+.experience__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  text-align: center;
+  gap: 1rem; /* Espacio entre trabajos */
+  padding-top: 2rem;
+}
+
