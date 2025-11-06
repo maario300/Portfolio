@@ -523,37 +523,35 @@ img {
 
 /* ===== EXPERIENCE =====*/
 .experience__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
   padding-top: 2rem;
 }
 
 .experience__container p {
   font-weight: var(--font-semi);
   text-align: center;
-  background: rgba(240, 242, 247, 0.6);
-  padding: 1rem 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 20px rgba(14, 36, 49, 0.1);
+  padding: 2rem 1.5rem;
   width: 100%;
-  max-width: 600px;
-  transition: transform 0.3s ease;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5rem;
 }
 
-/* 🔹 Escalonado visual */
-.experience__container p:nth-child(odd) {
-  align-self: flex-start;
-}
-
-.experience__container p:nth-child(even) {
-  align-self: flex-end;
-}
-
-/* 🔹 Efecto hover sutil */
+/* Efecto hover similar a los proyectos */
 .experience__container p:hover {
-  transform: scale(1.03);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
+
 
 
