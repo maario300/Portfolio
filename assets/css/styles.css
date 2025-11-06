@@ -532,8 +532,6 @@ img {
 }
 
 .experience__container p {
-  font-weight: var(--font-semi);
-  text-align: center;
   background: #fff;
   border-radius: 0.75rem;
   box-shadow: 0px 4px 20px rgba(14, 36, 49, 0.1);
@@ -541,13 +539,25 @@ img {
   width: 100%;
   max-width: 400px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   line-height: 1.5rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--second-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* Efecto hover similar a los proyectos */
+/* 🔹 Estilo para el nombre de la empresa */
+.experience__company {
+  display: block;
+  font-weight: 700;
+  color: #003366; /* azul oscuro elegante */
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* 🔹 Efecto hover similar a las tarjetas de “Work” */
 .experience__container p:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
