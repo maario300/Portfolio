@@ -529,5 +529,8 @@ img {
   text-align: center;
   gap: 1rem; /* Espacio entre trabajos */
   padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
