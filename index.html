@@ -23,6 +23,7 @@
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#certifications" class="nav__link">Certifications</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -152,6 +153,10 @@
             <!-- 🔹 CAMBIO: ahora usa experience__container -->
                <div class="work__container bd-grid experience__container">
                   <p>
+                    <span class="experience__company">TEIDE IV</span>
+                    (03/2026 - 06/2026) - Desarrollador de Aplicaciones (420h prácticas) - Diseño de base de datos, API RESTful, autenticación JWT y despliegue en Vercel
+                  </p>
+                  <p>
                     <span class="experience__company">DEICHMANN</span>
                     (11/2023 - 03/2024) - Atención al cliente
                   </p>
@@ -163,14 +168,50 @@
 
         </section>
 
+        <!--===== CERTIFICATIONS =====-->
+        <section class="work section" id="certifications">
+            <h2 class="section-title">Certifications</h2>
+            <div class="work__container bd-grid experience__container">
+                <p>
+                    <span class="experience__company">AWS Academy Graduate</span>
+                    Cloud Developing – Training Badge (2026)
+                </p>
+                <p>
+                    <span class="experience__company">AWS Academy Graduate</span>
+                    Cloud Foundations – Training Badge (2025)
+                </p>
+                <p>
+                    <span class="experience__company">MongoDB</span>
+                    Using MongoDB with Java (2026)
+                </p>
+                <p>
+                    <span class="experience__company">MongoDB</span>
+                    CRUD Operations in MongoDB (2026)
+                </p>
+                <p>
+                    <span class="experience__company">Computer Hardware Basics</span>
+                    (2025)
+                </p>
+                <p>
+                    <span class="experience__company">Oxford</span>
+                    Certificado C1 Inglés (2026)
+                </p>
+            </div>
+        </section>
+
         <!--===== CONTACT =====-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
                 <div class="work__container bd-grid experience__container">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Nombre" class="contact__input" value="Mario Monzón">
-                    <input type="mail" placeholder="Email" class="contact__input" value="mario.monzon.peso@gmail.com">
-                    <input type="text" placeholder="Numero" class="contact__input" value="+34 654 810 689">
+                <form action="https://formsubmit.co/mario.monzon.peso@gmail.com" method="POST" class="contact__form">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="text" name="Nombre" placeholder="Tu nombre" class="contact__input" required>
+                    <input type="email" name="Email" placeholder="Tu email" class="contact__input" required>
+                    <input type="text" name="Asunto" placeholder="Asunto" class="contact__input">
+                    <textarea name="Mensaje" placeholder="Tu mensaje" class="contact__input" rows="5" required></textarea>
+                    <button type="submit" class="button contact__button">Enviar mensaje</button>
                 </form>
             </div>
         </section>
