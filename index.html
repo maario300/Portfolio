@@ -4,9 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--===== SEO =====-->
+    <title>Mario Monzón Peso | Desarrollador de Aplicaciones Multiplataforma</title>
+    <meta name="description" content="Portfolio de Mario Monzón Peso, desarrollador de aplicaciones multiplataforma (DAM). Proyectos, experiencia, certificaciones AWS y MongoDB, y contacto.">
+    <meta name="author" content="Mario Monzón Peso">
+    <meta name="keywords" content="Mario Monzón, desarrollador, DAM, aplicaciones multiplataforma, Java, Kotlin, portfolio, AWS, MongoDB">
+
+    <!--===== Open Graph =====-->
+    <meta property="og:title" content="Mario Monzón Peso | Desarrollador de Aplicaciones Multiplataforma">
+    <meta property="og:description" content="Portfolio de Mario Monzón Peso: proyectos, experiencia y certificaciones como desarrollador de aplicaciones multiplataforma.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/img/apple-touch-icon.png">
+
+    <!--===== Favicon =====-->
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <title>Portfolio - Mario Monzón</title>
+
+    <!--===== Modo oscuro: aplicar preferencia guardada antes de pintar =====-->
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -27,8 +54,11 @@
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
+            <div class="nav__buttons">
+                <i class='bx bx-moon theme-toggle' id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
             </div>
         </nav>
     </header>
@@ -220,6 +250,9 @@
         </div>
         <p class="footer__copy">&#169; 2025 Mario Monzón. Todos los derechos reservados</p>
     </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 
 
