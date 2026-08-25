@@ -28,10 +28,11 @@
     <script>
         (function () {
             const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-                document.documentElement.setAttribute('data-theme', 'dark');
+            if (savedTheme === 'dark' || savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', savedTheme);
             }
+            /* Si no hay preferencia guardada, el modo oscuro del sistema
+               se aplica automáticamente vía @media (prefers-color-scheme) en el CSS */
         })();
     </script>
 </head>
@@ -156,12 +157,12 @@
             <h2 class="section-title">Work</h2>
 
             <div class="work__container bd-grid">
-                <a href="" class="work__img">
-                    <img src="assets/img/1.png" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/2.png" alt="">
-                </a>
+                <div class="work__video">
+                    <video controls preload="metadata" poster="assets/img/1.png">
+                        <source src="assets/video/proyecto.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de vídeo.
+                    </video>
+                </div>
                 <a href="" class="work__img">
                     <img src="assets/img/4.png" alt="">
                 </a>
