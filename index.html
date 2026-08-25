@@ -24,16 +24,27 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-    <!--===== Modo oscuro: aplicar preferencia guardada antes de pintar =====-->
-    <script>
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme === 'dark' || savedTheme === 'light') {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            }
-            /* Si no hay preferencia guardada, el modo oscuro del sistema
-               se aplica automáticamente vía @media (prefers-color-scheme) en el CSS */
-        })();
+  <script>
+        const themeButton = document.getElementById('theme-button');
+        
+        // Al cargar la web, si ya está oscuro, pone el icono del sol
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            themeButton.classList.replace('bx-moon', 'bx-sun');
+        }
+
+        // Lo que pasa al hacer clic en el botón
+        themeButton.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const targetTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            // Aplica el color y lo guarda
+            document.documentElement.setAttribute('data-theme', targetTheme);
+            localStorage.setItem('theme', targetTheme);
+            
+            // Alterna entre la luna y el sol
+            themeButton.classList.toggle('bx-moon');
+            themeButton.classList.toggle('bx-sun');
+        });
     </script>
 </head>
 
