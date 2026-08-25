@@ -146,38 +146,42 @@
             </div>
         </section>
 
-       <!--===== WORK SECTION =====-->
+     <!--===== WORK (ESTRUCTURA EN 3 FILAS) =====-->
 <section class="work section" id="work">
     <h2 class="section-title">Work</h2>
 
     <div class="work__container">
-        <!-- 1. Vídeo principal centrado -->
-        <div class="work__card work__card--video">
-            <video controls preload="metadata" poster="assets/img/1.png">
-                <source src="assets/img/VenoMap_demo.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de vídeo.
-            </video>
+        
+        <!-- Fila 1: Vídeo centrado -->
+        <div class="work__row work__row--video">
+            <div class="work__video-box">
+                <video controls preload="metadata" poster="assets/img/1.png">
+                    <source src="assets/img/VenoMap_demo.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de vídeo.
+                </video>
+            </div>
         </div>
 
-        <!-- 2. Foto principal centrada debajo del vídeo -->
-        <div class="work__card work__card--main">
-            <a href="#">
+        <!-- Fila 2: Primera foto centrada -->
+        <div class="work__row work__row--single">
+            <a href="#" class="work__img">
                 <img src="assets/img/4.png" alt="Trabajo Destacado">
             </a>
         </div>
 
-        <!-- 3. Fila de 3 fotos restantes con tamaño fijo -->
-        <div class="work__row">
-            <a href="#" class="work__card work__card--small">
+        <!-- Fila 3: Las 3 fotos restantes centradas y con espacio -->
+        <div class="work__row work__row--triple">
+            <a href="#" class="work__img">
                 <img src="assets/img/SERPIENTE.PNG" alt="Proyecto Serpiente">
             </a>
-            <a href="#" class="work__card work__card--small">
+            <a href="#" class="work__img">
                 <img src="assets/img/TresEnRaya.PNG" alt="Proyecto Tres en Raya">
             </a>
-            <a href="#" class="work__card work__card--small">
+            <a href="#" class="work__img">
                 <img src="assets/img/FLAPPYBIRD.PNG" alt="Proyecto Flappy Bird">
             </a>
         </div>
+
     </div>
 </section>
         <!--===== EXPERIENCE =====-->
