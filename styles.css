@@ -7,34 +7,31 @@
     width: 100%;
 }
 
-.my-work-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-
-.my-work-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
 .my-work-row--triple {
     gap: 30px;
     flex-wrap: wrap;
 }
 
-/* -- FILA 1: VÍDEO CENTRADO Y REDUCIDO A 2/3 -- */
+/* ===== CENTRADO Y TAMAÑO REDUCIDO DEL VÍDEO ===== */
+.my-work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra todo el contenido verticalmente respecto al título */
+    width: 100%;
+}
+
+.my-work-row {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos de cada fila */
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .my-work-video {
     width: 100%;
-    max-width: 470px; /* Reducido a 2/3 del tamaño anterior (700px -> 470px) */
-    margin: 0 auto;   /* Centrado garantizado */
+    max-width: 400px; /* Tamaño reducido para alinearlo perfectamente al centro */
+    margin: 0 auto;
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
