@@ -564,7 +564,7 @@ img {
 }
 
 
-/* ===== SECCIÓN WORK (ESTRUCURA EN 3 FILAS CENTRADAS) ===== */
+/* ===== SECCIÓN WORK: ESPACIADO Y VÍDEO MÓVIL REACONDICIONADO ===== */
 #work {
     display: flex;
     flex-direction: column;
@@ -573,34 +573,37 @@ img {
     width: 100%;
 }
 
+.my-work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px; /* Espacio vertical ampliado entre las 3 filas */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.my-work-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 .my-work-row--triple {
     gap: 30px;
     flex-wrap: wrap;
 }
 
-/* ===== CENTRADO Y TAMAÑO REDUCIDO DEL VÍDEO ===== */
-.my-work-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra todo el contenido verticalmente respecto al título */
-    width: 100%;
-}
-
-.my-work-row {
-    display: flex;
-    justify-content: center; /* Centra horizontalmente los elementos de cada fila */
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
-}
-
+/* FILA 1: Vídeo reducido un 40% (2/5 más pequeño: de 400px a 240px) */
 .my-work-video {
     width: 100%;
-    max-width: 400px; /* Tamaño reducido para alinearlo perfectamente al centro */
+    max-width: 240px; /* Formato estrecho y vertical tipo smartphone */
     margin: 0 auto;
-    border-radius: .5rem;
+    border-radius: 18px; /* Bordes redondeados estilo pantalla de móvil */
     overflow: hidden;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .my-work-video video {
@@ -609,13 +612,13 @@ img {
     display: block;
 }
 
-/* Filas 2 y 3: Tarjetas de 280x200px iguales */
+/* FILAS 2 Y 3: Tarjetas de fotos */
 .my-work-card {
     width: 280px;
     height: 200px;
     border-radius: .5rem;
     overflow: hidden;
-    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     display: block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -628,26 +631,11 @@ img {
     transition: transform 0.4s ease;
 }
 
-/* Animación Hover (Elevación + Zoom) */
 .my-work-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .my-work-card:hover img {
     transform: scale(1.08);
 }
-
-/* Adaptación a dispositivos móviles */
-@media screen and (max-width: 768px) {
-    .my-work-row--triple {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .my-work-card {
-        width: 100%;
-        max-width: 320px;
-    }
-}
-
