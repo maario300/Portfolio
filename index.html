@@ -146,41 +146,38 @@
             </div>
         </section>
 
-       <!--===== WORK (NUEVA ESTRUCTURA) =====-->
+       <!--===== WORK SECTION =====-->
 <section class="work section" id="work">
     <h2 class="section-title">Work</h2>
 
-    <!-- Contenedor general de la sección Work -->
-    <div class="work__layout">
-        
-        <!-- Vídeo principal centrado -->
-        <div class="work__main-video">
+    <div class="work__container">
+        <!-- 1. Vídeo principal centrado -->
+        <div class="work__card work__card--video">
             <video controls preload="metadata" poster="assets/img/1.png">
-                <source src="assets/img/proyecto.mp4" type="video/mp4">
+                <source src="assets/img/VenoMap_demo.mp4" type="video/mp4">
                 Tu navegador no soporta el elemento de vídeo.
             </video>
         </div>
 
-        <!-- Foto principal debajo del vídeo -->
-        <div class="work__main-img">
+        <!-- 2. Foto principal centrada debajo del vídeo -->
+        <div class="work__card work__card--main">
             <a href="#">
                 <img src="assets/img/4.png" alt="Trabajo Destacado">
             </a>
         </div>
 
-        <!-- Fila de 3 fotos restantes -->
+        <!-- 3. Fila de 3 fotos restantes con tamaño fijo -->
         <div class="work__row">
-            <a href="#" class="work__img">
+            <a href="#" class="work__card work__card--small">
                 <img src="assets/img/SERPIENTE.PNG" alt="Proyecto Serpiente">
             </a>
-            <a href="#" class="work__img">
+            <a href="#" class="work__card work__card--small">
                 <img src="assets/img/TresEnRaya.PNG" alt="Proyecto Tres en Raya">
             </a>
-            <a href="#" class="work__img">
+            <a href="#" class="work__card work__card--small">
                 <img src="assets/img/FLAPPYBIRD.PNG" alt="Proyecto Flappy Bird">
             </a>
         </div>
-
     </div>
 </section>
         <!--===== EXPERIENCE =====-->
