@@ -146,86 +146,43 @@
             </div>
         </section>
 
-       /* ===== WORK SECTION (ESTRUCTURA PERSONALIZADA) ===== */
+        <!--===== WORK (NUEVA ESTRUCTURA) =====-->
+        <section class="work section" id="work">
+            <h2 class="section-title">Work</h2>
 
-/* Contenedor principal centrado */
-.work__layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.5rem;
-    width: 100%;
-    max-width: 1024px;
-    margin-left: auto;
-    margin-right: auto;
-}
+            <!-- Contenedor general de la sección Work -->
+            <div class="work__layout bd-grid">
+                
+                <!-- Vídeo principal centrado -->
+                <div class="work__main-video">
+                    <video controls preload="metadata" poster="assets/img/1.png">
+                        <source src="assets/video/proyecto.mp4" type="video/mp4">
+                        Tu navegador no soporta el elemento de vídeo.
+                    </video>
+                </div>
 
-/* Estilos globales y bordes redondeados para el contenido */
-.work__main-video video,
-.work__main-img img,
-.work__img img {
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    display: block;
-    object-fit: cover;
-}
+                <!-- Foto principal debajo del vídeo -->
+                <div class="work__main-img">
+                    <a href="#">
+                        <img src="assets/img/4.png" alt="Trabajo Destacado">
+                    </a>
+                </div>
 
-/* 1. Vídeo principal centrado */
-.work__main-video {
-    width: 100%;
-    max-width: 800px;
-}
+                <!-- Fila de 3 fotos restantes -->
+                <div class="work__row">
+                    <a href="#" class="work__img">
+                        <img src="assets/img/SERPIENTE.PNG" alt="Proyecto Serpiente">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/TresEnRaya.PNG" alt="Proyecto Tres en Raya">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/FLAPPYBIRD.PNG" alt="Proyecto Flappy Bird">
+                    </a>
+                </div>
 
-/* 2. Foto principal debajo del vídeo */
-.work__main-img {
-    width: 100%;
-    max-width: 800px;
-    transition: transform 0.3s ease;
-}
-
-.work__main-img:hover {
-    transform: translateY(-5px);
-}
-
-/* 3. Fila con las 3 fotos restantes */
-.work__row {
-    display: flex;
-    justify-content: space-between;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 800px;
-}
-
-.work__img {
-    flex: 1;
-    min-width: 0;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.work__img:hover {
-    transform: translateY(-5px);
-}
-
-/* ===== MEDIA QUERIES (MÓVILES Y TABLETS) ===== */
-@media screen and (max-width: 768px) {
-    .work__layout {
-        gap: 1.5rem;
-    }
-
-    /* Transforma la fila horizontal en una columna vertical */
-    .work__row {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .work__img {
-        width: 100%;
-    }
-}
+            </div>
+        </section>
 
         <!--===== EXPERIENCE =====-->
         <section class="work section" id="experience">
