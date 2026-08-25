@@ -1,19 +1,23 @@
-
-
-/* ===== NUEVOS ESTILOS WORK (A PRUEBA DE FALLOS) ===== */
+/* ===== SECCIÓN WORK (ESTRUCURA EN 3 FILAS CENTRADAS) ===== */
+#work {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 
 .my-work-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 50px; /* Separación vertical grande entre las 3 filas */
+    gap: 40px;
     width: 100%;
-    max-width: 1100px;
+    max-width: 1024px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 1rem;
 }
 
-/* Base para cada fila: Fuerza el centrado horizontal */
 .my-work-row {
     display: flex;
     justify-content: center;
@@ -21,19 +25,18 @@
     width: 100%;
 }
 
-/* Modificador para la fila de 3 fotos: Añade separación entre ellas */
 .my-work-row--triple {
-    gap: 30px; 
-    flex-wrap: wrap; /* Permite que bajen si la pantalla se estrecha */
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-/* -- FILA 1: ESTILOS DEL VÍDEO -- */
+/* Fila 1: Vídeo */
 .my-work-video {
     width: 100%;
-    max-width: 750px; /* Ancho máximo del vídeo */
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    max-width: 700px;
+    border-radius: .5rem;
     overflow: hidden;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
 }
 
 .my-work-video video {
@@ -42,52 +45,44 @@
     display: block;
 }
 
-/* -- FILAS 2 Y 3: LAS 4 IMÁGENES EXACTAMENTE IGUALES -- */
+/* Filas 2 y 3: Tarjetas de 280x200px iguales */
 .my-work-card {
-    width: 280px;  /* ANCHO EXACTAMENTE IGUAL PARA LAS 4 */
-    height: 220px; /* ALTO EXACTAMENTE IGUAL PARA LAS 4 */
-    border-radius: 12px;
+    width: 280px;
+    height: 200px;
+    border-radius: .5rem;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
     display: block;
-    
-    /* Animación de elevación al poner el ratón */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .my-work-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Evita que las fotos se aplasten o deformen */
+    object-fit: cover;
     display: block;
-    transition: transform 0.4s ease; /* Para el efecto de zoom interior */
+    transition: transform 0.4s ease;
 }
 
-/* Animación Hover (se eleva la tarjeta y hace zoom la imagen) */
+/* Animación Hover (Elevación + Zoom) */
 .my-work-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 .my-work-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
-/* -- ADAPTACIÓN A TELÉFONOS MÓVILES -- */
-@media screen and (max-width: 900px) {
-    .my-work-container {
-        gap: 30px;
-    }
-    
-    /* En móvil, la fila de 3 pasa a ser vertical */
+/* Adaptación a dispositivos móviles */
+@media screen and (max-width: 768px) {
     .my-work-row--triple {
         flex-direction: column;
         gap: 20px;
     }
 
-    /* Las imágenes se adaptan al ancho del móvil */
     .my-work-card {
         width: 100%;
-        max-width: 350px;
+        max-width: 320px;
     }
 }
