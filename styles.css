@@ -30,10 +30,11 @@
     flex-wrap: wrap;
 }
 
-/* Fila 1: Vídeo */
+/* -- FILA 1: VÍDEO CENTRADO Y REDUCIDO A 2/3 -- */
 .my-work-video {
     width: 100%;
-    max-width: 700px;
+    max-width: 470px; /* Reducido a 2/3 del tamaño anterior (700px -> 470px) */
+    margin: 0 auto;   /* Centrado garantizado */
     border-radius: .5rem;
     overflow: hidden;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
