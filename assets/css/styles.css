@@ -639,3 +639,31 @@ img {
 .my-work-card:hover img {
     transform: scale(1.08);
 }
+
+/* ===== COLORES DEL MODO OSCURO ===== */
+[data-theme="dark"] body {
+    background-color: #121212;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .l-header,
+[data-theme="dark"] .nav {
+    background-color: #121212;
+}
+
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .home__title,
+[data-theme="dark"] .about__subtitle,
+[data-theme="dark"] .skills__subtitle,
+[data-theme="dark"] .nav__link,
+[data-theme="dark"] .nav__logo {
+    color: #ffffff;
+}
+
+/* Para que las tarjetas del portfolio no desentonen */
+[data-theme="dark"] .my-work-card,
+[data-theme="dark"] .my-work-video {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
