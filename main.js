@@ -58,22 +58,27 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 
 /*===== DARK MODE TOGGLE =====*/
 const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark'
-const iconTheme = 'bx-sun'
 
-const getCurrentTheme = () => document.documentElement.getAttribute('data-theme') === darkTheme ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx-sun' : 'bx-moon'
-
-if (getCurrentTheme() === 'dark') {
-    themeButton.classList.add(iconTheme)
-}
-
-themeButton.addEventListener('click', () => {
-    if (getCurrentTheme() === 'dark') {
-        document.documentElement.removeAttribute('data-theme')
-    } else {
-        document.documentElement.setAttribute('data-theme', 'dark')
+if (themeButton) {
+    const getCurrentTheme = () => {
+        const attr = document.documentElement.getAttribute('data-theme')
+        if (attr === 'dark') return 'dark'
+        if (attr === 'light') return 'light'
+        // Sin elección manual: seguir la preferencia del sistema/dispositivo
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
-    themeButton.classList.toggle(iconTheme)
-    localStorage.setItem('theme', getCurrentTheme())
-})
+
+    const setIcon = (theme) => {
+        themeButton.classList.remove('bx-moon', 'bx-sun')
+        themeButton.classList.add(theme === 'dark' ? 'bx-sun' : 'bx-moon')
+    }
+
+    setIcon(getCurrentTheme())
+
+    themeButton.addEventListener('click', () => {
+        const newTheme = getCurrentTheme() === 'dark' ? 'light' : 'dark'
+        document.documentElement.setAttribute('data-theme', newTheme)
+        setIcon(newTheme)
+        localStorage.setItem('theme', newTheme)
+    })
+}
