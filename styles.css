@@ -5,102 +5,94 @@
     padding: 0;
 }
 
-/* ===== WORK SECTION (TAMAÑOS FIJOS Y CENTRADO) ===== */
+/* ===== NUEVOS ESTILOS WORK (A PRUEBA DE FALLOS) ===== */
 
-/* Contenedor general centrado */
-.work__container {
+.my-work-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 50px; /* Separación vertical grande entre las 3 filas */
     width: 100%;
-    max-width: 900px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
+    padding: 20px;
 }
 
-/* 1. Vídeo con tamaño fijo centrado */
-.work__card--video {
-    width: 650px;
-    max-width: 100%;
-}
-
-.work__card--video video {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* 2. Foto principal con tamaño fijo centrado */
-.work__card--main {
-    width: 650px;
-    max-width: 100%;
-}
-
-.work__card--main img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* 3. Fila de las 3 fotos inferiores */
-.work__row {
+/* Base para cada fila: Fuerza el centrado horizontal */
+.my-work-row {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 25px;
-    width: 650px;
-    max-width: 100%;
+    align-items: center;
+    width: 100%;
 }
 
-/* Dimensiones fijas para las 3 fotos */
-.work__card--small {
-    width: 200px;
-    height: 130px;
-    flex-shrink: 0;
-    border-radius: 8px;
+/* Modificador para la fila de 3 fotos: Añade separación entre ellas */
+.my-work-row--triple {
+    gap: 30px; 
+    flex-wrap: wrap; /* Permite que bajen si la pantalla se estrecha */
+}
+
+/* -- FILA 1: ESTILOS DEL VÍDEO -- */
+.my-work-video {
+    width: 100%;
+    max-width: 750px; /* Ancho máximo del vídeo */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+.my-work-video video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* -- FILAS 2 Y 3: LAS 4 IMÁGENES EXACTAMENTE IGUALES -- */
+.my-work-card {
+    width: 280px;  /* ANCHO EXACTAMENTE IGUAL PARA LAS 4 */
+    height: 220px; /* ALTO EXACTAMENTE IGUAL PARA LAS 4 */
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease;
+    display: block;
+    
+    /* Animación de elevación al poner el ratón */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.work__card--small img {
+.my-work-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Evita que las fotos se aplasten o deformen */
     display: block;
+    transition: transform 0.4s ease; /* Para el efecto de zoom interior */
 }
 
-/* Efecto hover */
-.work__card--small:hover,
-.work__card--main:hover {
-    transform: translateY(-5px);
+/* Animación Hover (se eleva la tarjeta y hace zoom la imagen) */
+.my-work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* ===== MEDIA QUERY (RESPONSIVE EN MÓVILES) ===== */
-@media screen and (max-width: 768px) {
-    .work__card--video video,
-    .work__card--main img {
-        height: auto;
+.my-work-card:hover img {
+    transform: scale(1.05);
+}
+
+/* -- ADAPTACIÓN A TELÉFONOS MÓVILES -- */
+@media screen and (max-width: 900px) {
+    .my-work-container {
+        gap: 30px;
     }
-
-    .work__row {
+    
+    /* En móvil, la fila de 3 pasa a ser vertical */
+    .my-work-row--triple {
         flex-direction: column;
-        align-items: center;
-        width: 100%;
         gap: 20px;
     }
 
-    .work__card--small {
+    /* Las imágenes se adaptan al ancho del móvil */
+    .my-work-card {
         width: 100%;
         max-width: 350px;
-        height: 200px;
     }
 }
