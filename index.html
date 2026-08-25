@@ -146,15 +146,16 @@
             </div>
         </section>
 
-     <!--===== WORK (ESTRUCTURA EN 3 FILAS) =====-->
+   <!--===== WORK (NUEVO CÓDIGO AISLADO EN 3 FILAS) =====-->
 <section class="work section" id="work">
     <h2 class="section-title">Work</h2>
 
-    <div class="work__container">
+    <!-- Contenedor principal centrado -->
+    <div class="my-work-container">
         
         <!-- Fila 1: Vídeo centrado -->
-        <div class="work__row work__row--video">
-            <div class="work__video-box">
+        <div class="my-work-row">
+            <div class="my-work-video">
                 <video controls preload="metadata" poster="assets/img/1.png">
                     <source src="assets/img/VenoMap_demo.mp4" type="video/mp4">
                     Tu navegador no soporta el elemento de vídeo.
@@ -163,25 +164,27 @@
         </div>
 
         <!-- Fila 2: Primera foto centrada -->
-        <div class="work__row work__row--single">
-            <a href="#" class="work__img">
+        <div class="my-work-row">
+            <a href="#" class="my-work-card">
                 <img src="assets/img/4.png" alt="Trabajo Destacado">
             </a>
         </div>
 
-        <!-- Fila 3: Las 3 fotos restantes centradas y con espacio -->
-        <div class="work__row work__row--triple">
-            <a href="#" class="work__img">
+        <!-- Fila 3: Las 3 fotos restantes centradas y separadas -->
+        <div class="my-work-row my-work-row--triple">
+            <a href="#" class="my-work-card">
                 <img src="assets/img/SERPIENTE.PNG" alt="Proyecto Serpiente">
             </a>
-            <a href="#" class="work__img">
+            <a href="#" class="my-work-card">
                 <img src="assets/img/TresEnRaya.PNG" alt="Proyecto Tres en Raya">
             </a>
-            <a href="#" class="work__img">
+            <a href="#" class="my-work-card">
                 <img src="assets/img/FLAPPYBIRD.PNG" alt="Proyecto Flappy Bird">
             </a>
         </div>
 
+    </div>
+</section>
     </div>
 </section>
         <!--===== EXPERIENCE =====-->
