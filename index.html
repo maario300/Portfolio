@@ -17,7 +17,8 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/img/apple-touch-icon.png">
 
-    <!--===== Favicon =====-->
+    <!--===== Favicon (CORREGIDO) =====-->
+    <!-- Asegúrate de tener la imagen favicon.png en tu carpeta assets/img/ -->
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
     <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
@@ -138,61 +139,64 @@
                     <div class="skills__data"><span class="skills__name">Wordpress & Figma</span></div>
                     <div class="skills__data"><span class="skills__name">Linux</span></div>
                     <div class="skills__data"><span class="skills__name">Excel Avanzado</span></div>
-
-
-
-
-                
-
-                  
-
                 </div>
                 <div>
                     <img src="assets/img/work3.jpg" alt="" class="skills__img">
                 </div>
             </div>
         </section>
-        <!--===== WORK =====-->
+
+        <!--===== WORK (NUEVA ESTRUCTURA) =====-->
         <section class="work section" id="work">
             <h2 class="section-title">Work</h2>
 
-            <div class="work__container bd-grid">
-                <div class="work__video">
+            <!-- Contenedor general de la sección Work -->
+            <div class="work__layout bd-grid">
+                
+                <!-- Vídeo principal centrado -->
+                <div class="work__main-video">
                     <video controls preload="metadata" poster="assets/img/1.png">
                         <source src="assets/video/proyecto.mp4" type="video/mp4">
                         Tu navegador no soporta el elemento de vídeo.
                     </video>
                 </div>
-                <a href="" class="work__img">
-                    <img src="assets/img/4.png" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/SERPIENTE.PNG" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/TresEnRaya.PNG" alt="">
-                </a>
-                <a href="" class="work__img">
-                    <img src="assets/img/FLAPPYBIRD.PNG" alt="">
-                </a>
+
+                <!-- Foto principal debajo del vídeo -->
+                <div class="work__main-img">
+                    <a href="#">
+                        <img src="assets/img/4.png" alt="Trabajo Destacado">
+                    </a>
+                </div>
+
+                <!-- Fila de 3 fotos restantes -->
+                <div class="work__row">
+                    <a href="#" class="work__img">
+                        <img src="assets/img/SERPIENTE.PNG" alt="Proyecto Serpiente">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/TresEnRaya.PNG" alt="Proyecto Tres en Raya">
+                    </a>
+                    <a href="#" class="work__img">
+                        <img src="assets/img/FLAPPYBIRD.PNG" alt="Proyecto Flappy Bird">
+                    </a>
+                </div>
+
             </div>
         </section>
 
-          <!--===== EXPERIENCE =====-->
+        <!--===== EXPERIENCE =====-->
         <section class="work section" id="experience">
             <h2 class="section-title">Experience</h2>
-            <!-- 🔹 CAMBIO: ahora usa experience__container -->
-               <div class="work__container bd-grid experience__container">
-                  <p>
+            <div class="work__container bd-grid experience__container">
+                <p>
                     <span class="experience__company">TEIDE IV</span>
                     (03/2026 - 06/2026) - Desarrollador de Aplicaciones (420h prácticas) - Diseño de base de datos, API RESTful, autenticación JWT y despliegue en Vercel
-                  </p>
-                  <p>
+                </p>
+                <p>
                     <span class="experience__company">HYUNDAI</span>
                     (80h prácticas) - Desarrollador Web (Landingpage, SEO, Accesibilidad, Wordpress)
-                  </p>
-                </div>
-
+                </p>
+            </div>
         </section>
 
         <!--===== CERTIFICATIONS =====-->
@@ -256,16 +260,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
